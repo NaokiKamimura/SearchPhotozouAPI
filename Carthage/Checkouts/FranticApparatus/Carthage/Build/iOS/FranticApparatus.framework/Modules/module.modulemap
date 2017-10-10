@@ -1,0 +1,4 @@
+framework module FranticApparatus {
+    header "FranticApparatus-Swift.h"
+    requires objc
+}

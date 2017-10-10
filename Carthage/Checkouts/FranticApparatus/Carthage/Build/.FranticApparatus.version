@@ -1,0 +1,9 @@
+{
+  "commitish" : "7.0.0",
+  "iOS" : [
+    {
+      "hash" : "e7f741f11b29d3fe6f5887b7290bb372a02ea91aedd4f731802f084f91233d28",
+      "name" : "FranticApparatus"
+    }
+  ]
+}

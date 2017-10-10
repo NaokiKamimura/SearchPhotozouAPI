@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire" "4.5.1"
+github "Quick/Nimble" "v7.0.2"
+github "Quick/Quick" "v1.2.0"
+github "jkolb/FranticApparatus" "7.0.0"
