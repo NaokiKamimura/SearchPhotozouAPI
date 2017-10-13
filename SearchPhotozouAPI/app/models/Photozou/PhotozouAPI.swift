@@ -20,17 +20,25 @@ import Foundation
 import Alamofire
 import FranticApparatus
 
+private let searchPublicJSONUrlBase = "https://api.photozou.jp/rest/search_public.json"
 final class PhotozouAPI {
-    // TODO: 画像検索用のURLを作る
-    private let jsonSearchUrlBase = "https://api.photozou.jp/rest/search_public.json"
-    
-    
-    // TODO: 画像検索、Promissの結果を返す（想定はArrayの中にstructで画像の構造が入る。Promiss<[ImageSearchResult...])>のような）
-    class func imageSearch(keyword: String) {
-        // TODO: APIへリクエストを投げる
-        // TODO: 通信出来たかどうかでエラーと分岐
-        // TODO: 通信出来ていれば、レスポンスをもらう
-        // TODO: レスポンスをJSONへ変換する
-        // TODO: JSONを画像検索結果にして返す
+    class func searchPublic(keyword: String, limit: Int) -> Promise<ImageSearchResult> {
+        return Promise<ImageSearchResult> { (fullfill, reject, isCancelled) in
+            Alamofire.request(searchPublicJSONUrlBase, parameters: ["keyword": keyword, "limit": limit]).responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: value, options: [])
+                        let result = try PhotozouSearchPublicResultFromJSON(jsonData: jsonData)
+                        fullfill(ImageSearchResult(images: result.getImages()))
+                    } catch let error {
+                        reject(error)
+                    }
+                case .failure(let error):
+                    reject(error)
+                }
+                
+            }
+        }
     }
 }

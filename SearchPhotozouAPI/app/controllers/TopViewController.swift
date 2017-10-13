@@ -13,12 +13,15 @@ final class TopViewController: UIViewController, UICollectionViewDataSource, UIC
     @IBOutlet weak var imageSearchResultCollectionView: UICollectionView!
     
     private let imageResultSize: Int = 50
+    // TODO: APIから画像取得でき次第、消す
     private let flowerImage = UIImage(named: "flower1")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageSearchResultCollectionView.dataSource = self
         imageSearchResultCollectionView.delegate = self
+        // TODO: API通信を動かす為仮置き。画面と連動するようになったら消す
+        ImageSearchService.search(searchText: "bara", limit: imageResultSize)
     }
     
     // 表示する画像の数は今のところ固定にする

@@ -15,10 +15,11 @@
 		A4572F3C1F84BAE20018A5AD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A43B1CA11F848CAB0067B012 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A4572F3F1F84BBB50018A5AD /* top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4572F3E1F84BBB50018A5AD /* top.storyboard */; };
 		A47AB4591F85FDF3002F0A5B /* flower1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A47AB4571F85FDF3002F0A5B /* flower1.jpg */; };
-		A47AB46E1F8C9ED9002F0A5B /* ImageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AB46D1F8C9ED9002F0A5B /* ImageSearch.swift */; };
+		A47AB46E1F8C9ED9002F0A5B /* ImageSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AB46D1F8C9ED9002F0A5B /* ImageSearchService.swift */; };
 		A47AB4741F8CA4B3002F0A5B /* PhotozouAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AB4731F8CA4B3002F0A5B /* PhotozouAPI.swift */; };
-		A47AB4791F8CB26F002F0A5B /* PhotozouImageSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AB4781F8CB26F002F0A5B /* PhotozouImageSearchResult.swift */; };
-		A47AB47B1F8CD3C7002F0A5B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A47AB47A1F8CD3C7002F0A5B /* Default-568h@2x.png */; };
+		A47AB4791F8CB26F002F0A5B /* PhotozouSearchPublicResultFromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47AB4781F8CB26F002F0A5B /* PhotozouSearchPublicResultFromJSON.swift */; };
+		A48897761F908D4A002C0FCC /* ImageSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48897751F908D4A002C0FCC /* ImageSearchResult.swift */; };
+		A488977B1F90BC96002C0FCC /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A488977A1F90BC96002C0FCC /* Image.swift */; };
 		A48BBC721F84C4D500D17FAD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43B1CA11F848CAB0067B012 /* Alamofire.framework */; };
 		A4D586BB1F84C58D00BD445B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D586B91F84C58D00BD445B /* Quick.framework */; };
 		A4D586BC1F84C58D00BD445B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4D586BA1F84C58D00BD445B /* Nimble.framework */; };
@@ -85,10 +86,11 @@
 		A4572F251F84ABBC0018A5AD /* FranticApparatus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FranticApparatus.framework; path = Carthage/Build/iOS/FranticApparatus.framework; sourceTree = "<group>"; };
 		A4572F3E1F84BBB50018A5AD /* top.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = top.storyboard; sourceTree = "<group>"; };
 		A47AB4571F85FDF3002F0A5B /* flower1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower1.jpg; sourceTree = "<group>"; };
-		A47AB46D1F8C9ED9002F0A5B /* ImageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearch.swift; sourceTree = "<group>"; };
+		A47AB46D1F8C9ED9002F0A5B /* ImageSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchService.swift; sourceTree = "<group>"; };
 		A47AB4731F8CA4B3002F0A5B /* PhotozouAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotozouAPI.swift; sourceTree = "<group>"; };
-		A47AB4781F8CB26F002F0A5B /* PhotozouImageSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotozouImageSearchResult.swift; sourceTree = "<group>"; };
-		A47AB47A1F8CD3C7002F0A5B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A47AB4781F8CB26F002F0A5B /* PhotozouSearchPublicResultFromJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotozouSearchPublicResultFromJSON.swift; sourceTree = "<group>"; };
+		A48897751F908D4A002C0FCC /* ImageSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSearchResult.swift; sourceTree = "<group>"; };
+		A488977A1F90BC96002C0FCC /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		A4D586B91F84C58D00BD445B /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		A4D586BA1F84C58D00BD445B /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		A4D586C21F84DD7300BD445B /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 		A43B1C6A1F8480960067B012 = {
 			isa = PBXGroup;
 			children = (
-				A47AB47A1F8CD3C7002F0A5B /* Default-568h@2x.png */,
 				A43B1C961F8480BF0067B012 /* README.md */,
 				A43B1C751F8480960067B012 /* SearchPhotozouAPI */,
 				A43B1C8A1F8480970067B012 /* SearchPhotozouAPITests */,
@@ -140,6 +141,7 @@
 		A43B1C751F8480960067B012 /* SearchPhotozouAPI */ = {
 			isa = PBXGroup;
 			children = (
+				A48897701F8F4159002C0FCC /* services */,
 				A4572F291F84B5250018A5AD /* resources */,
 				A4572F281F84B4EF0018A5AD /* app */,
 			);
@@ -191,7 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				A47AB4751F8CB047002F0A5B /* Photozou */,
-				A47AB46D1F8C9ED9002F0A5B /* ImageSearch.swift */,
+				A48897751F908D4A002C0FCC /* ImageSearchResult.swift */,
+				A488977A1F90BC96002C0FCC /* Image.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -207,7 +210,6 @@
 		A4572F2C1F84B5430018A5AD /* views */ = {
 			isa = PBXGroup;
 			children = (
-				A47AB46A1F8783C3002F0A5B /* imageSearchTop */,
 				A4572F3E1F84BBB50018A5AD /* top.storyboard */,
 			);
 			path = views;
@@ -221,20 +223,21 @@
 			path = SampleImages;
 			sourceTree = "<group>";
 		};
-		A47AB46A1F8783C3002F0A5B /* imageSearchTop */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = imageSearchTop;
-			sourceTree = "<group>";
-		};
 		A47AB4751F8CB047002F0A5B /* Photozou */ = {
 			isa = PBXGroup;
 			children = (
 				A47AB4731F8CA4B3002F0A5B /* PhotozouAPI.swift */,
-				A47AB4781F8CB26F002F0A5B /* PhotozouImageSearchResult.swift */,
+				A47AB4781F8CB26F002F0A5B /* PhotozouSearchPublicResultFromJSON.swift */,
 			);
 			path = Photozou;
+			sourceTree = "<group>";
+		};
+		A48897701F8F4159002C0FCC /* services */ = {
+			isa = PBXGroup;
+			children = (
+				A47AB46D1F8C9ED9002F0A5B /* ImageSearchService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4572F3F1F84BBB50018A5AD /* top.storyboard in Resources */,
-				A47AB47B1F8CD3C7002F0A5B /* Default-568h@2x.png in Resources */,
 				A47AB4591F85FDF3002F0A5B /* flower1.jpg in Resources */,
 				A43B1C7E1F8480960067B012 /* Assets.xcassets in Resources */,
 			);
@@ -364,11 +366,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A488977B1F90BC96002C0FCC /* Image.swift in Sources */,
 				A4D586C31F84DD7300BD445B /* TopViewController.swift in Sources */,
-				A47AB4791F8CB26F002F0A5B /* PhotozouImageSearchResult.swift in Sources */,
-				A47AB46E1F8C9ED9002F0A5B /* ImageSearch.swift in Sources */,
+				A47AB4791F8CB26F002F0A5B /* PhotozouSearchPublicResultFromJSON.swift in Sources */,
+				A47AB46E1F8C9ED9002F0A5B /* ImageSearchService.swift in Sources */,
 				A47AB4741F8CA4B3002F0A5B /* PhotozouAPI.swift in Sources */,
 				A43B1C771F8480960067B012 /* AppDelegate.swift in Sources */,
+				A48897761F908D4A002C0FCC /* ImageSearchResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
